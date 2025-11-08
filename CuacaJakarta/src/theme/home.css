@@ -1,0 +1,157 @@
+/* 🌞 DAY MODE */
+.weather-bg-day {
+  --background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+/* 🌙 NIGHT MODE */
+.weather-bg-night {
+  --background: linear-gradient(180deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: white;
+}
+
+/* Global layout */
+ion-toolbar {
+  --background: transparent;
+  --color: white;
+}
+
+.current-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.weather-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-anim {
+  width: 130px;
+  height: 130px;
+  animation: fadeIn 1s ease-in;
+}
+
+.temp {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.desc {
+  font-size: 20px;
+  text-transform: capitalize;
+  opacity: 0.9;
+}
+
+.date {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.info-item {
+  font-size: 14px;
+}
+
+.label {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.forecast-section {
+  padding: 20px;
+}
+
+.hourly-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 14px;
+  padding: 8px 0;
+}
+
+.hour-card {
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 8px 10px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.day-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  color: white;
+}
+
+.temp-small {
+  font-weight: 500;
+}
+
+.date-small {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.chart-section {
+  padding: 20px;
+}
+
+.chart-wrapper {
+  height: 260px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🔄 Animasi Transisi Halus */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: all 0.5s ease;
+}
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
